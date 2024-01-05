@@ -58,14 +58,14 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
    $row = $result->fetch_assoc(); 
-    echo "<label for="fname">id:</label>";
-    echo "<input value='".$row["id"]."' type="text" id="fname" name="id" >";
-    echo "<label for="fname">Name :</label>";
-    echo "<input value='" . $row["name"]. "' type="text" id="fname" name="name" >";
-    echo "<label for="lname">Price :</label>";
-    echo "<input value='" . $row["price"]. "' type="text" id="lname" name="price" >";
-    echo " <label for="quantity">quantity :</label>";
-    echo " <input value='" . $row["quantity"]. "' type="text" id="lname" name="quantity" >"; 
+    echo "<label>id:</label>";
+    echo "<input value='".$row["id"]."' type='text' name='id' >";
+    echo "<label >Name :</label>";
+    echo "<input value='" . $row["name"]. "' type='text'  name='name' >";
+    echo "<label>Price :</label>";
+    echo "<input value='" . $row["price"]. "' type='text' name='price' >";
+    echo " <label>quantity :</label>";
+    echo " <input value='" . $row["quantity"]. "' type='text' name='quantity' >"; 
 } else {
     echo "0 results";
 }

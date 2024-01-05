@@ -10,11 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$id=$_POST["id"];
-$name=$_POST["name"];
-$price=$_POST["price"];
-$quantity=$_POST["quantity"];
-$sql = "UPDATE article SET name='$name', price=$price , quantity=$quantity  where id=$id ";
+$sql = "DELETE FROM article WHERE id=".$_REQUEST["id"];
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
   header("Location: index.php");

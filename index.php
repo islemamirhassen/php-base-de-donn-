@@ -67,7 +67,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "<tr><td>".$row["id"]. "</td><td> " . $row["name"]. "</td><td> " . $row["price"]. "</td><td> " . $row["quantity"]. "</td><td><a href='update.php?id=" . $row["id"]. "' style=' background-color: blue;'>editer</a>   <a href='delete.php'>delete</a></td></tr> " ;
+      echo "<tr><td>".$row["id"]. "</td><td> " . $row["name"]. "</td><td> " . $row["price"]. "</td><td> " . $row["quantity"]. "</td><td><a href='update.php?id=" . $row["id"]. "' style=' background-color: blue;'>editer</a>   <a href='sup.php?id=" . $row["id"]. "'>delete</a></td></tr> " ;
     }
 } else {
     echo "0 results";
